@@ -8,7 +8,7 @@ function SearchBar({placeholder,data}) {
     const handleFilter = (event) => {
         const searchWorld = event.target.value;
         const newFilter = data.filter((value) => {
-            return value.full_name.includes(searchWorld);
+            return value.full_name.toLowerCase().includes(searchWorld.toLowerCase());
         });
         setFilteredData(newFilter);
     }
