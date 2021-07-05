@@ -33,23 +33,19 @@ input:focus {
     display: none;
 }
   
-.dataResult .dataItem {
+.dataResult .linkDataItem {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     color: black;
 }
-  
-.dataItem p {
-    margin-left: 10px;
+
+.linkDataItem:hover {
+    background-color: lightgrey;
 }
 
-a {
-    text-decoration: none;
-}
-  
-a:hover {
-    background-color: lightgrey;
+.linkDataItem p {
+    margin-left: 10px;
 }
   

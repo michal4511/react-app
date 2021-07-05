@@ -23,7 +23,7 @@ function SearchBar({placeholder,data}) {
                 <div className="dataResult">
                     {filteredData.map((value, key) => {
                         return (
-                            <a className="dataItem" href="#" key={key} target="_blank" rel="noreferrer">
+                            <a className="linkDataItem" href="#" key={key} target="_blank" rel="noreferrer">
                                 <p>{value.full_name}</p>
                             </a>
                         );
