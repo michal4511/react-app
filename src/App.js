@@ -1,27 +1,27 @@
+import {Switch, Route} from 'react-router-dom';
+
+// styles & data
 import './App.css';
-import SearchBar from './Components/SearchBar';
-import CustomerData from './MOCK_DATA.json';
-import {Switch, Route, NavLink} from 'react-router-dom';
+
+// components
+import TheNavigation from './Components/TheNavigation';
+
+//views
+
+import Home from './Components/Home';
+import About from './Components/About';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/tunes">Tunes</NavLink>
-          <NavLink to="/about">About</NavLink>
-        </nav>
-        
+        <TheNavigation/>
       </header>
       <main>
         <Switch>
-          <Route path="/" render={() => <h1>Search databases</h1>} exact/>
-          <Route path="/tunes" render={() => <h1>Tunes</h1>} />
-          <Route path="/about" render={() => <h1>About</h1>} />
+          <Route path="/" component={Home} exact/>
+          <Route path="/about" component={About}/>
         </Switch>
-
-        <SearchBar placeholder="Enter a Customer Name..." data={CustomerData}/>
       </main>
     </div>
   );
