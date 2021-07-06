@@ -2,6 +2,9 @@ import React from 'react'
 import SearchBar from './SearchBar';
 import CustomerData from '../MOCK_DATA.json';
 
+// style
+import "./Home.css"
+
 function Home() {
     return (
         <div className="home">
