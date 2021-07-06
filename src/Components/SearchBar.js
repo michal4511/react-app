@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import "./SearchBar.css";
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
-import { FilterDrama } from '@material-ui/icons';
 
 function SearchBar({placeholder,data}) {
 
@@ -16,15 +15,8 @@ function SearchBar({placeholder,data}) {
             return value.full_name.toLowerCase().includes(searchWorld.toLowerCase());
         });
 
-        //empty input doesn't show daraResuls div
-        {searchWorld === "" ? setFilteredData([]) : setFilteredData(newFilter)};
-
-        //alternative:
-        // if (searchWorld === "") {
-        //     setFilteredData([])
-        // } else {
-        //     setFilteredData(newFilter);
-        // }
+        //empty input doesn't show daraResult div
+        searchWorld === "" ? setFilteredData([]) : setFilteredData(newFilter);
     }
 
     const clearInput = () => {
