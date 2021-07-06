@@ -1,5 +1,4 @@
 .searchInputs {
-    margin-top: 105px;
     display: flex;
 }
   
@@ -13,6 +12,18 @@
     padding: 15px;
     height: 30px;
     width: 300px;
+}
+
+.searchIcon {
+    height: 60px;
+    width: 50px;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+.searchIcon svg {
+    font-size: 35px;
 }
   
 input:focus {
@@ -48,4 +59,7 @@ input:focus {
 .linkDataItem p {
     margin-left: 10px;
 }
-  
+
+#clearBtn {
+    cursor: pointer;
+}
