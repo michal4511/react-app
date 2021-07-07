@@ -27,8 +27,13 @@ function SearchBar({placeholder,data}) {
             return value.full_name.toLowerCase().includes(searchWorld.toLowerCase());
         });
 
-        //empty input doesn't show daraResult div
-        searchWorld === "" ? setFilteredData([]) : setFilteredData(newFilter);
+        //empty input doesn't show dataResult div and furtherInfo div
+        if (searchWorld === "") {
+            setFilteredData([])
+            setUserName("")
+        } else {
+            setFilteredData(newFilter)
+        }
     }
 
     const clearInput = () => {
@@ -43,7 +48,7 @@ function SearchBar({placeholder,data}) {
         setUserEmail(value.email);
         setUserPhone(value.phone)
     }
-
+   
     return (
         <div className="search">
             <div className="searchInputs">
