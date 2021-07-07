@@ -30,8 +30,7 @@ input:focus {
     outline: none;
 }
   
-.dataResult,
-.furtherInfo {
+.dataResult {
     margin-top: 5px;
     width: 300px;
     height: 200px;
@@ -40,7 +39,7 @@ input:focus {
     overflow: hidden;
     overflow-y: auto;
 }
-  
+
 .dataResult::-webkit-scrollbar {
     display: none;
 }
@@ -51,6 +50,16 @@ input:focus {
     display: flex;
     align-items: center;
     color: black;
+}
+
+.furtherInfo {
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .linkDataItem {
