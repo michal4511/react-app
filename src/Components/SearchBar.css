@@ -1,5 +1,6 @@
 .searchInputs {
     display: flex;
+    margin-top: 15px;
 }
   
 .search input {
@@ -76,4 +77,30 @@ input:focus {
 
 #clearBtn {
     cursor: pointer;
+}
+
+.searchParameter{
+    display: flex;
+    flex-direction: column;
+}
+
+.searchParameter label{
+    background-color: inherit;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 20px;
+    height: 30px;
+    width: 380px;
+    color: white;
+    margin-top: 15px;
+}
+
+.searchParameter select {
+    width: 100%;
+    min-height: 30px;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 15px;
+    border: none;  
 }
