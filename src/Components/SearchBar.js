@@ -10,8 +10,9 @@ import PersonIcon from '@material-ui/icons/Person';
 import HomeIcon from '@material-ui/icons/Home';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
+import DriveEtaIcon from '@material-ui/icons/DriveEta';
 
-function SearchBar({placeholder,data}) {
+function SearchBar({parameter,placeholder,data}) {
 
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
@@ -19,11 +20,13 @@ function SearchBar({placeholder,data}) {
     const [userAddress, setUserAddress] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userPhone, setUserPhone] = useState("");
+    const [userCar, setUserCar] = useState("")
 
     const handleFilter = (event) => {
         const searchWorld = event.target.value;
         setWordEntered(searchWorld);
-        const newFilter = data.filter((value) => {
+        const newData = data.filter(auto => auto.car === parameter)
+        const newFilter = newData.filter((value) => {
             return value.full_name.toLowerCase().includes(searchWorld.toLowerCase());
         });
 
@@ -46,7 +49,8 @@ function SearchBar({placeholder,data}) {
         setUserName(value.full_name);
         setUserAddress(value.address)
         setUserEmail(value.email);
-        setUserPhone(value.phone)
+        setUserPhone(value.phone);
+        setUserCar(value.car)
     }
    
     return (
@@ -77,6 +81,7 @@ function SearchBar({placeholder,data}) {
                     <p><HomeIcon/>{userAddress}</p>
                     <p><EmailIcon/>{userEmail}</p>
                     <p><PhoneIcon/>{userPhone}</p>
+                    <p><DriveEtaIcon/>{userCar}</p>
                 </div>
             )
             }

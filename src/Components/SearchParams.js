@@ -5,9 +5,14 @@ import './SearchParams.css';
 
 const Cars = ["Audi", "Ford", "Nissan", "Porsche"];
 
-function SearchParams() {
+function SearchParams(props) {
 
     const [car, setCar] = useState("");
+
+    const handleClick = (e) => {
+        setCar(e.target.value);
+        props.changeCar(car);
+    }
 
     return (
         <div className="searchParameter">
@@ -16,8 +21,8 @@ function SearchParams() {
                 <select 
                     id="car"
                     value={car}
-                    onChange={(e) => setCar(e.target.value)}
-                    onBlur={(e) => setCar(e.target.value)}
+                    onChange={(e) => handleClick(e)}
+                    onBlur={(e) => handleClick(e)}
                 >
                     <option/>
                     {Cars.map(car => (
@@ -27,9 +32,10 @@ function SearchParams() {
                     ))}
                 </select>
             </label>
+            {/* <button onClick={() => props.changeCar(car)}
+            >Ahoj</button> */}
         </div>
     )
-    console.log(car)
 }
 
 export default SearchParams
