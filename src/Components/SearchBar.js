@@ -12,7 +12,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import DriveEtaIcon from '@material-ui/icons/DriveEta';
 
-function SearchBar({parameter,placeholder,data}) {
+function SearchBar({selectedCar,placeholder,data}) {
 
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
@@ -25,7 +25,7 @@ function SearchBar({parameter,placeholder,data}) {
     const handleFilter = (event) => {
         const searchWorld = event.target.value;
         setWordEntered(searchWorld);
-        const newData = data.filter(auto => auto.car === parameter)
+        const newData = data.filter(auto => auto.car === selectedCar)
         const newFilter = newData.filter((value) => {
             return value.full_name.toLowerCase().includes(searchWorld.toLowerCase());
         });

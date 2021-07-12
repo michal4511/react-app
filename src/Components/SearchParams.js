@@ -5,13 +5,14 @@ import './SearchParams.css';
 
 const Cars = ["Audi", "Ford", "Nissan", "Porsche"];
 
-function SearchParams(props) {
+function SearchParams({setSelectedCar, setEmptyValue}) {
 
     const [car, setCar] = useState("");
 
     const handleClick = (e) => {
         setCar(e.target.value);
-        props.changeCar(car);
+        setSelectedCar(car);
+        setEmptyValue("")
     }
 
     return (
@@ -32,8 +33,6 @@ function SearchParams(props) {
                     ))}
                 </select>
             </label>
-            {/* <button onClick={() => props.changeCar(car)}
-            >Ahoj</button> */}
         </div>
     )
 }
