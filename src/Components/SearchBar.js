@@ -55,7 +55,7 @@ function SearchBar({selectedCar,placeholder,data}) {
    
     return (
         <div className="search">
-            <p>Name</p>
+            <p className="name">Name</p>
             <div className="searchInputs">
                 
                 <input type="text" id="name" placeholder={placeholder} value={wordEntered} onChange={handleFilter}/>
