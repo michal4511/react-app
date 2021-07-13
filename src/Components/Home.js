@@ -16,7 +16,7 @@ function Home() {
 
     return (
         <div className="home">
-            <h1>Search Customers {selectedCar}</h1>
+            <h1>Search Customers</h1>
             <SearchParams setSelectedCar={setSelectedCar} />
             <SearchBar selectedCar={selectedCar} placeholder="Enter a Customer Name..." data={CustomerData}/>
         </div>

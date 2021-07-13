@@ -1,6 +1,6 @@
 .navigation {
     border: 2px solid white;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 3rem;
     margin-top: 2rem;
     font-size: 20px;
@@ -19,5 +19,5 @@
 
 .navigation a:hover,
 .navigation a:active {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #02D1BC;
 }

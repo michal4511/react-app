@@ -5,8 +5,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 6rem;
+    color: white;
 }
 
 .about p {
-    text-align:justify
+    text-align:justify;
 }

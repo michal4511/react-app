@@ -55,8 +55,10 @@ function SearchBar({selectedCar,placeholder,data}) {
    
     return (
         <div className="search">
+            <p>Name</p>
             <div className="searchInputs">
-                <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter}/>
+                
+                <input type="text" id="name" placeholder={placeholder} value={wordEntered} onChange={handleFilter}/>
                 <div className="searchIcon">
                     {filteredData.length === 0 ? <SearchIcon/> : <CloseIcon id="clearBtn" onClick={clearInput}/>}
                 </div>
@@ -77,11 +79,26 @@ function SearchBar({selectedCar,placeholder,data}) {
             {
             userName.length !== 0 && (
                 <div className="furtherInfo">
-                    <p><PersonIcon/>{userName}</p>
-                    <p><HomeIcon/>{userAddress}</p>
-                    <p><EmailIcon/>{userEmail}</p>
-                    <p><PhoneIcon/>{userPhone}</p>
-                    <p><DriveEtaIcon/>{userCar}</p>
+                    <div className="customerInfo">
+                        <div className="icon"><PersonIcon/></div>
+                        <p>{userName}</p>
+                    </div>
+                    <div className="customerInfo">
+                        <div className="icon"><HomeIcon/></div>
+                        <p>{userAddress}</p>
+                    </div>
+                    <div className="customerInfo">
+                        <div className="icon"><EmailIcon/></div>
+                        <p>{userEmail}</p>
+                    </div>
+                    <div className="customerInfo">
+                        <div className="icon"><PhoneIcon/></div>
+                        <p>{userPhone}</p>
+                    </div>
+                    <div className="customerInfo">
+                        <div className="icon"><DriveEtaIcon/></div>
+                        <p>{userCar}</p>
+                    </div>
                 </div>
             )
             }

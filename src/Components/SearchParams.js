@@ -12,7 +12,6 @@ function SearchParams({setSelectedCar, setEmptyValue}) {
     const handleClick = (e) => {
         setCar(e.target.value);
         setSelectedCar(car);
-        setEmptyValue("")
     }
 
     return (
@@ -20,6 +19,7 @@ function SearchParams({setSelectedCar, setEmptyValue}) {
             <label htmlFor="car">
                 Car
                 <select 
+                    className="arrow"
                     id="car"
                     value={car}
                     onChange={(e) => handleClick(e)}

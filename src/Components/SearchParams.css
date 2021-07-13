@@ -2,26 +2,42 @@
     height: 100px;
     display: flex;
     flex-direction: column;
-    
 }
 
 .searchParameter label{
     background-color: inherit;
-    border-radius: 2px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
     font-size: 20px;
     height: 30px;
     width: 380px;
     color: white;
     margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .searchParameter select {
     width: 100%;
     min-height: 30px;
     font-size: 18px;
-    margin-top: 5px;
     padding: 15px;
     border: none;  
+    border-radius: 8px;
+
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* arrows */
+
+select.arrow {
+    background-image: linear-gradient(45deg, transparent 50%, black 50%),
+      linear-gradient(135deg, black 50%, transparent 50%),
+      linear-gradient(to right, #02D1BC, #02D1BC);
+    background-position: calc(100% - 25px) calc(1em + 4px),
+      calc(100% - 20px) calc(1em + 4px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 50px 60px;
+    background-repeat: no-repeat;
 }
